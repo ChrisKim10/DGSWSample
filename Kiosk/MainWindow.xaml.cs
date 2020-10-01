@@ -47,8 +47,15 @@ namespace Kiosk
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            lbMenus.ItemsSource = lstFood.Where(x => x.category == Category.SPECIAL).ToList();
+            lbCategory.SelectedIndex = 0; //처음 실행 시 첫번째 카테고리가 선택되도록 
+        }
 
+        private void lbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lbCategory.SelectedIndex == -1) return;
+
+            Category category = (Category)lbCategory.SelectedIndex;
+            lbMenus.ItemsSource = lstFood.Where(x => x.category == category).ToList();
         }
     }
 }
