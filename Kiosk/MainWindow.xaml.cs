@@ -39,8 +39,8 @@ namespace Kiosk
         public MainWindow()
         {
             InitializeComponent();
-            Uri fontUri = new Uri(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\BMDOHYEON_ttf.ttf");
-            this.FontFamily = new System.Windows.Media.FontFamily(fontUri, "배달의민족 도현");
+            //Uri fontUri = new Uri(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\BMDOHYEON_ttf.ttf");
+            this.FontFamily = new System.Windows.Media.FontFamily("배달의민족 도현");
 
             this.Loaded += MainWindow_Loaded;
         }
