@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,32 +16,29 @@ using System.Windows.Shapes;
 namespace WPFPageSample.View
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for CompletePage.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class CompletePage : Page
     {
-        public HomePage()
+        public CompletePage()
         {
             InitializeComponent();
-            this.Loaded += HomePage_Loaded;
+            this.Loaded += CompletePage_Loaded;
         }
 
-        private void HomePage_Loaded(object sender, RoutedEventArgs e)
+        private void CompletePage_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            if (NavigationService.CanGoForward)
+            while (NavigationService?.CanGoBack == true)
             {
-                NavigationService.GoForward();
+                NavigationService?.RemoveBackEntry();
             }
-            else
-            {
-                OrderPage orderPage = new OrderPage();
-                NavigationService.Navigate(orderPage);
-            }
+
+            NavigationService.Navigate(new HomePage());
         }
     }
 }

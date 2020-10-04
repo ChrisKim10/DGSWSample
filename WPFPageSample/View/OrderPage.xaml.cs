@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace WPFPageSample.View
         public OrderPage()
         {
             InitializeComponent();
+            this.Loaded += OrderPage_Loaded;
+        }
+
+        private void OrderPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //여기에 데이터를 비교해서 처리하는 루틴을 추가하면 된다.
         }
 
         private void btnPrev_Click(object sender, RoutedEventArgs e)

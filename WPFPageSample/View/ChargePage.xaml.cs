@@ -16,19 +16,18 @@ using System.Windows.Shapes;
 namespace WPFPageSample.View
 {
     /// <summary>
-    /// Interaction logic for PlacePage.xaml
+    /// Interaction logic for ChargePage.xaml
     /// </summary>
-    public partial class PlacePage : Page
+    public partial class ChargePage : Page
     {
-        public PlacePage()
+        public ChargePage()
         {
             InitializeComponent();
-            this.Loaded += PlacePage_Loaded;
+            this.Loaded += ChargePage_Loaded;
         }
 
-        private void PlacePage_Loaded(object sender, RoutedEventArgs e)
+        private void ChargePage_Loaded(object sender, RoutedEventArgs e)
         {
-            //여기에 데이터를 비교해서 처리하는 루틴을 추가하면 된다.
         }
 
         private void btnPrev_Click(object sender, RoutedEventArgs e)
@@ -47,10 +46,9 @@ namespace WPFPageSample.View
             }
             else
             {
-                SelectChargePage selectChargePage = new SelectChargePage();
-                NavigationService.Navigate(selectChargePage);
+                CompletePage completePage = new CompletePage();
+                NavigationService.Navigate(completePage);
             }
         }
     }
 }
-

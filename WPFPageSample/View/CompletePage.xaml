@@ -1,4 +1,4 @@
-﻿<Page x:Class="WPFPageSample.View.PlacePage"
+﻿<Page x:Class="WPFPageSample.View.CompletePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WPFPageSample.View"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PlacePage">
+      Title="CompletePage">
 
     <Grid>
         <TextBlock Text="여기는 식사장소 페이지"
@@ -18,15 +18,12 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                     Margin="0,0,24,24">
-            <Button x:Name="btnPrev"
-                    Content="뒤로"
-                    Padding="12"
-                    Click="btnPrev_Click"></Button>
-            <Button x:Name="btnNext"
-                    Content="주문하기"
+            <Button x:Name="btnHome"
+                    Content="홈으로(이건 테스트로 넣어둠)"
                     Margin="12,0,0,0"
                     Padding="12"
-                    Click="btnNext_Click"></Button>
+                    Click="btnHome_Click" />
+
         </StackPanel>
     </Grid>
 </Page>
