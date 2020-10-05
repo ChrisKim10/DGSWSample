@@ -101,14 +101,18 @@
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel />
+                        <!--<WrapPanel />-->
+                        <UniformGrid Columns="2" />
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Width="250" Height="250">
-                            <Image Source="{Binding imagePath}"/>
-                            <TextBlock Text="{Binding name}" Margin="0,24,0,0" HorizontalAlignment="Center"/>
+                        <StackPanel Width="250"
+                                    Height="250">
+                            <Image Source="{Binding imagePath}" />
+                            <TextBlock Text="{Binding name}"
+                                       Margin="0,24,0,0"
+                                       HorizontalAlignment="Center" />
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
